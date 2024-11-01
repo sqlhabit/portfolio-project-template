@@ -9,5 +9,6 @@ This is a Data Analysis project.
 </div>
 
 <br clear="left"/>
+<br>
 
 Now we're back to free flowing text.
