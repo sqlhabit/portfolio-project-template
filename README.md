@@ -1,5 +1,5 @@
 <div>
-  <img align="left" src="https://images.weserv.nl/?url=avatars.githubusercontent.com/u/768070?v=4&h=120&w=120&fit=cover&mask=circle&maxage=7d" alt="Profile picture" width="20%">
+  <img align="left" src="https://images.weserv.nl/?url=avatars.githubusercontent.com/u/768070?v=4&h=120&w=120&fit=cover&mask=circle&maxage=7d" alt="Profile picture" width="20%" hspace="10">
 
   <div>
     Hi, my name is Anatoli and this is my sample portfolio project. It has a collection on charts and queries from a fictional startup named Bindle (cc SQL Habit).
