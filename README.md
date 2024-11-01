@@ -31,11 +31,14 @@ In this project, I conduct an in-depth analysis of startup data to uncover key i
 <div>
   <img align="right" src="./images/charts/952.png" alt="Daily cumulative number of users" width="75%">
 
-  Let's look at total number of users daily. It's a good dashboard to display on a TV in the office. 😉
+  Let's look at total number of users daily.
 </div>
 
 <br clear="right"/>
 <br>
+
+> [!TIP]
+> It's a good dashboard to display on a TV in the office. 😉
 
 ### Where users come from?
 
