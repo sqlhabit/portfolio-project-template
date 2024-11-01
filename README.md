@@ -16,9 +16,9 @@ In this project, I conduct an in-depth analysis of startup data to uncover key i
 ## User analysis
 
 <div>
-  Number of users who came organically vs via marketing campaigns.
-
   <img align="right" src="./charts/868.png" alt="Paid vs organic signups" width="75%">
+
+  Number of users who came organically vs via marketing campaigns.
 </div>
 
 <br clear="right"/>
