@@ -15,13 +15,26 @@ In this project, I conduct an in-depth analysis of startup data to uncover key i
 
 ## User analysis
 
+### Total number of users
+
 <div>
-  <img align="right" src="./images/charts/868.png" alt="Paid vs organic signups" width="75%">
+  <img align="right" src="./images/charts/952.png" alt="Daily cumulative number of users" width="75%">
+
+  Let's look at total number of users daily. It's a good dashboard to display on a TV in the office. 😉
+</div>
+
+<br clear="right"/>
+<br>
+
+### Where users come from?
+
+<div>
+  <img align="left" src="./images/charts/868.png" alt="Paid vs organic signups" width="75%">
 
   Number of users who came organically vs via marketing campaigns.
 </div>
 
-<br clear="right"/>
+<br clear="left"/>
 <br>
 
 Now we're back to free flowing text.
