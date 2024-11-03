@@ -47,7 +47,16 @@ In this project, I conduct an in-depth analysis of startup data to uncover key i
   Number of users who came organically vs via marketing campaigns.
 </div>
 
-<br clear="left"/>
+<br clear="left">
+<br>
+
+<div>
+  <img align="right" src="./images/charts/1291.png" alt="Number of users per country" width="75%">
+
+  TOP-10 countries with their respective number of users.
+</div>
+
+<br clear="right">
 <br>
 
 Now we're back to free flowing text.
