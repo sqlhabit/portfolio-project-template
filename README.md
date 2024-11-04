@@ -8,6 +8,7 @@ Hi :wave: My name is Anatoli and this is a template for a portfolio project on <
 
 <br>
 
+### Table of Contents
 - [AARRR metrics for a subscription-based book app](#aarrr-metrics-for-a-subscription-based-book-app)
   - [Acquisition](#acquisition)
     - [Daily signups](#daily-signups)
