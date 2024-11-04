@@ -14,8 +14,8 @@ Hi :wave: My name is Anatoli and this is a template for a portfolio project on <
     - [Daily signups](#daily-signups)
     - [Daily organic vs paid signups](#daily-organic-vs-paid-signups)
     - [Biggest marketing channels](#biggest-marketing-channels)
-  - [User analysis](#user-analysis)
-    - [Total number of users](#total-number-of-users)
+  - [Activation](#activation)
+    - [Soft-activation or users with mobile app](#soft-activation-or-users-with-mobile-app)
     - [Where users come from?](#where-users-come-from)
 
 # AARRR metrics for a subscription-based book app
@@ -120,21 +120,46 @@ ORDER BY 4 DESC
 <br clear="left"/>
 <br>
 
-## User analysis
+## Activation
 
-### Total number of users
+Now we've glimpsed into the user numbers, let's see what happens with these users down the funnel.
+
+### Soft-activation or users with mobile app
+
+Let's see how many users who signed up on the web installed a mobile app.
+
+~~~pgsql
+WITH mobile_app_users AS (
+  SELECT DISTINCT user_id
+  FROM mobile_analytics.events m
+)
+
+SELECT
+  u.created_at::date AS d,
+  CASE WHEN m.user_id IS NOT NULL THEN 'has_mobile_app' ELSE 'only_web' END AS mobile_app_status,
+  COUNT(u.id) AS user_count
+FROM users u
+LEFT JOIN mobile_app_users m
+  ON u.id = m.user_id
+WHERE
+  date_part('year', u.created_at) = 2018
+  AND date_part('month', u.created_at) = 2
+GROUP BY 1, 2
+ORDER BY 1 DESC
+~~~
 
 <div>
-  <img align="right" src="./images/charts/952.png" alt="Daily cumulative number of users" width="75%">
+  <img align="right" src="./images/charts/new_signups_with_mobile_apps.png" alt="New web signups with mobile apps" width="75%">
 
   Let's look at total number of users daily.
 </div>
 
+> [!NOTE]
+> Even if new users haven't read a book yet, we may reach them later in the mobile app via a push notification or an in-app message.
+
 <br clear="right"/>
 <br>
 
-> [!TIP]
-> It's a good dashboard to display on a TV in the office. 😉
 
 ### Where users come from?
 
