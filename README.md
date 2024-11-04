@@ -16,7 +16,6 @@ Hi :wave: My name is Anatoli and this is a template for a portfolio project on <
     - [Biggest marketing channels](#biggest-marketing-channels)
   - [Activation](#activation)
     - [Soft-activation or users with mobile app](#soft-activation-or-users-with-mobile-app)
-    - [Where users come from?](#where-users-come-from)
 
 # AARRR metrics for a subscription-based book app
 
@@ -159,26 +158,3 @@ ORDER BY 1 DESC
 
 <br clear="right"/>
 <br>
-
-
-### Where users come from?
-
-<div>
-  <img align="left" src="./images/charts/868.png" alt="Paid vs organic signups" width="75%">
-
-  Number of users who came organically vs via marketing campaigns.
-</div>
-
-<br clear="left">
-<br>
-
-<div>
-  <img align="right" src="./images/charts/1291.png" alt="Number of users per country" width="75%">
-
-  TOP-10 countries with their respective number of users.
-</div>
-
-<br clear="right">
-<br>
-
-Now we're back to free flowing text.
