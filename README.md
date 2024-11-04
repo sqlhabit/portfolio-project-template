@@ -1,9 +1,7 @@
-<div>
 <img align="left" src="https://images.weserv.nl/?url=avatars.githubusercontent.com/u/768070?v=4&h=100&w=100&fit=cover&mask=circle&maxage=7d" alt="Profile picture" width="50" height="50" hspace="10">
 
 <div>
 Hi :wave: My name is Anatoli and this is a template for a portfolio project on <a href="https://www.sqlhabit.com">SQL Habit</a>. It has a collection of dashboards for a fictional startup named Bindle, a subscription-based book service.
-</div>
 </div>
 
 <br>
@@ -57,11 +55,9 @@ GROUP BY 1
 ORDER BY 1 DESC
 ~~~
 
-<div>
-  <img align="left" src="./images/charts/daily_signups.png" alt="Daily signups in the past 30 days" width="75%">
+<img align="left" src="./images/charts/daily_signups.png" alt="Daily signups in the past 30 days" width="75%">
 
-  A number of new user accounts created per day for the past 30 days.
-</div>
+A number of new user accounts created per day for the past 30 days.
 
 <br clear="left"/>
 <br>
@@ -83,11 +79,9 @@ GROUP BY 1, 2
 ORDER BY 1 DESC
 ~~~
 
-<div>
-  <img align="right" src="./images/charts/daily_organic_vs_paid_signups.png" alt="Daily organic vs paid signups" width="75%">
+<img align="right" src="./images/charts/daily_organic_vs_paid_signups.png" alt="Daily organic vs paid signups" width="75%">
 
-  A number of new organic and paid user accounts created per day for the past 30 days.
-</div>
+A number of new organic and paid user accounts created per day for the past 30 days.
 
 <br clear="right"/>
 <br>
