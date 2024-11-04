@@ -8,6 +8,15 @@ Hi :wave: My name is Anatoli and this is a template for a portfolio project on <
 
 <br>
 
+- [AARRR metrics for a subscription-based book app](#aarrr-metrics-for-a-subscription-based-book-app)
+  - [Acquisition](#acquisition)
+    - [Daily signups](#daily-signups)
+    - [Daily organic vs paid signups](#daily-organic-vs-paid-signups)
+    - [Biggest marketing channels](#biggest-marketing-channels)
+  - [User analysis](#user-analysis)
+    - [Total number of users](#total-number-of-users)
+    - [Where users come from?](#where-users-come-from)
+
 # AARRR metrics for a subscription-based book app
 
 AARRR is a collection of metrics to measure any business:
