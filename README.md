@@ -48,7 +48,11 @@ SELECT
   COUNT(*) AS user_count
 FROM users
 WHERE
-  created_at > now() - '1 month'::interval
+  -- from now on we'll use this date filter instead of
+  -- now() - '30 days'::interval because the dataset
+  -- is from 2018
+  date_part('year', created_at) = 2018
+  AND date_part('month', created_at) = 2
 GROUP BY 1
 ORDER BY 1 DESC
 ~~~
