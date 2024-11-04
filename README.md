@@ -15,7 +15,8 @@ Hi :wave: My name is Anatoli and this is a template for a portfolio project on <
     - [Daily organic vs paid signups](#daily-organic-vs-paid-signups)
     - [Biggest marketing channels](#biggest-marketing-channels)
   - [Activation](#activation)
-    - [Soft-activation or users with mobile app](#soft-activation-or-users-with-mobile-app)
+    - [Soft-activation: users with mobile app](#soft-activation-users-with-mobile-app)
+    - [Hard-activation: users who read a book](#hard-activation-users-who-read-a-book)
 
 # AARRR metrics for a subscription-based book app
 
@@ -123,9 +124,9 @@ ORDER BY 4 DESC
 
 Now we've glimpsed into the user numbers, let's see what happens with these users down the funnel.
 
-### Soft-activation or users with mobile app
+### Soft-activation: users with mobile app
 
-Let's see how many users who signed up on the web installed a mobile app.
+Let's see how many users who signed up on the web installed a mobile app. Here and later we'll use daily cohorts based on user signup date.
 
 ~~~pgsql
 WITH mobile_app_users AS (
@@ -150,11 +151,74 @@ ORDER BY 1 DESC
 <div>
   <img align="right" src="./images/charts/new_signups_with_mobile_apps.png" alt="New web signups with mobile apps" width="75%">
 
-  Let's look at total number of users daily.
+  Let's see what portion of users who signed up via the website installed our mobile app.
 </div>
 
 > [!NOTE]
 > Even if new users haven't read a book yet, we may reach them later in the mobile app via a push notification or an in-app message.
+
+<br clear="right"/>
+<br>
+
+### Hard-activation: users who read a book
+
+By definition, the hard-activation is when users do the primary action of our app – read books. Let's see what percentage of users actually read books.
+
+~~~pgsql
+SELECT
+  u.created_at::date AS d,
+  CASE WHEN b.user_id IS NOT NULL THEN 'started_a_book' ELSE 'has_not_started_a_book' END AS hard_activation_status,
+  COUNT(DISTINCT(u.id)) AS user_count
+FROM users u
+LEFT JOIN books_users b
+  ON u.id = b.user_id
+WHERE
+  date_part('year', u.created_at) = 2018
+  AND date_part('month', u.created_at) = 2
+GROUP BY 1, 2
+ORDER BY 1 DESC
+~~~
+
+<div>
+  <img align="left" src="./images/charts/hard_activation.png" alt="Web signups who have started reading a book" width="75%">
+
+  Let's see the portion of web signups who actually did what they came for and started reading a book.
+</div>
+
+<br clear="left"/>
+<br>
+
+If we were to start improving the hard-activation rate, let's make sure we can reliably measure it. We'd want to increase a portion of users who started reading books, so let's rebuild the last chart :point_up: and show hard activation rate in percentages:
+
+~~~pgsql
+WITH hard_activation_stats AS (
+  SELECT
+    u.created_at::date AS d,
+    CASE WHEN b.user_id IS NOT NULL THEN 'started_a_book' ELSE 'has_not_started_a_book' END AS hard_activation_status,
+    COUNT(DISTINCT(u.id)) AS user_count
+  FROM users u
+  LEFT JOIN books_users b
+    ON u.id = b.user_id
+  WHERE
+    date_part('year', u.created_at) = 2018
+    AND date_part('month', u.created_at) = 2
+  GROUP BY 1, 2
+  ORDER BY 1 DESC
+)
+
+SELECT
+  d,
+  hard_activation_status,
+  ROUND(100.0 * user_count / SUM(user_count) OVER (PARTITION BY d, hard_activation_stats)) AS pct
+FROM hard_activation_stats
+ORDER BY d DESC
+~~~
+
+<div>
+  <img align="right" src="./images/charts/hard_activation_relative.png" alt="Hard activation in percentage points" width="75%">
+
+  We can use this chart to measure if our efforts (improving onboarding, book recommendations, etc) lead to a bigger hard activation rate.
+</div>
 
 <br clear="right"/>
 <br>
