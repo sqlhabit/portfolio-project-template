@@ -1,7 +1,7 @@
 <div>
 <img align="left" src="https://images.weserv.nl/?url=avatars.githubusercontent.com/u/768070?v=4&h=100&w=100&fit=cover&mask=circle&maxage=7d" alt="Profile picture" width="50" height="50" hspace="10">
 
-Hi :wave: My name is Anatoli and this is a template for a portfolio project on <a href="https://www.sqlhabit.com">SQL Habit</a>. It has a collection of dashboards for a fictional startup named Bindle, a subscription-based book service.
+Hi :wave: My name is Anatoli and this is a template for a portfolio project on [SQL Habit](https://www.sqlhabit.com). It has a collection of dashboards for a fictional startup named Bindle, a subscription-based book service.
 </div>
 
 <br>
