@@ -105,11 +105,9 @@ GROUP BY 1, 2, 3
 ORDER BY 4 DESC
 ~~~
 
-<div>
-  <img align="left" src="./images/charts/biggest_marketing_channels.png" alt="Biggest marketing channels" width="75%">
+<img align="left" src="./images/charts/biggest_marketing_channels.png" alt="Biggest marketing channels" width="75%">
 
-  As you can see, Twitter and Facebook are our primary paid CPC marketing channels.
-</div>
+As you can see, Twitter and Facebook are our primary paid CPC marketing channels.
 
 <br clear="left"/>
 <br>
@@ -142,11 +140,9 @@ GROUP BY 1, 2
 ORDER BY 1 DESC
 ~~~
 
-<div>
-  <img align="right" src="./images/charts/new_signups_with_mobile_apps.png" alt="New web signups with mobile apps" width="75%">
+<img align="right" src="./images/charts/new_signups_with_mobile_apps.png" alt="New web signups with mobile apps" width="75%">
 
-  Let's see what portion of users who signed up via the website installed our mobile app.
-</div>
+Let's see what portion of users who signed up via the website installed our mobile app.
 
 > [!NOTE]
 > Even if new users haven't read a book yet, we may reach them later in the mobile app via a push notification or an in-app message.
@@ -173,11 +169,9 @@ GROUP BY 1, 2
 ORDER BY 1 DESC
 ~~~
 
-<div>
-  <img align="left" src="./images/charts/hard_activation.png" alt="Web signups who have started reading a book" width="75%">
+<img align="left" src="./images/charts/hard_activation.png" alt="Web signups who have started reading a book" width="75%">
 
-  Let's see the portion of web signups who actually did what they came for and started reading a book.
-</div>
+Let's see the portion of web signups who actually did what they came for and started reading a book.
 
 <br clear="left"/>
 <br>
@@ -208,11 +202,9 @@ FROM hard_activation_stats
 ORDER BY d DESC
 ~~~
 
-<div>
-  <img align="right" src="./images/charts/hard_activation_relative.png" alt="Hard activation in percentage points" width="75%">
+<img align="right" src="./images/charts/hard_activation_relative.png" alt="Hard activation in percentage points" width="75%">
 
-  We can use this chart to measure if our efforts (improving onboarding, book recommendations, etc) lead to a bigger hard activation rate.
-</div>
+We can use this chart to measure if our efforts (improving onboarding, book recommendations, etc) lead to a bigger hard activation rate.
 
 <br clear="right"/>
 <br>
